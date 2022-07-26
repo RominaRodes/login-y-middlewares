@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/app.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./header.ejs')%>
+    <form action="/register" method="POST" enctype="multipart/form-data">
+        <label>Name</label>
+        <input 
+        type="text" 
+        name="name"
+        value="<%= locals.old? old.name: null %>" 
+        ><br>
+        <% if(locals.errors && errors.name){%>
+            <div class="text-danger">
+                <p><%= errors.name.msg %></p>
+                </div>
+           <% }%>
+        <label>Apellido</label>
+        <input 
+        type="text" 
+        name="surname" 
+        value="<%= locals.old? old.surname: null %>" 
+         ><br>
+        <% if(locals.errors && errors.surname){%>
+            <div class="text-danger">
+                <p><%= errors.surname.msg %></p>
+                </div>
+           <% }%>
+        <label>Email</label>
+        <input 
+        type="email" 
+        name="email"
+        value="<%= locals.old? old.email: null %>" ><br>
+        <% if(locals.errors && errors.email){%>
+            <div class="text-danger">
+                <p><%= errors.email.msg %></p>
+                </div>
+           <% }%>
+           <% if(locals.errorEmail){%>
+            <div class="text-danger">
+                <p><%= errorEmail.msg %></p>
+                </div>
+           <% }%>
+
+        <label>Foto de perfil</label>
+        <input type="file" name="avatar"><br>
+        <% if(locals.errors && errors.avatar){%>
+            <div class="text-danger">
+                <p><%= errors.avatar.msg %></p>
+                </div>
+           <% }%>
+        
+        <label>Password</label>
+        <input type="password" name="password"><br>
+        <% if(locals.errors && errors.password){%>
+            <div class="text-danger">
+                <p><%= errors.password.msg %></p>
+                </div>
+           <% }%>
+
+        <button type="submit">Submit</button>
+
+    </form>
+</body>
+</html>

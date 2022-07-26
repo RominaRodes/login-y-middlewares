@@ -1,0 +1,26 @@
+[
+ {
+  "id": 1,
+  "name": "Romina",
+  "surname": "r",
+  "email": "rominarodes@gmail.com",
+  "password": "12345678",
+  "avatar": "img-user1658677508706.jpg"
+ },
+ {
+  "id": 2,
+  "name": "Romina",
+  "surname": "r",
+  "email": "rominarodes@gmail.com",
+  "password": "$2a$10$8AwBw9nUEUAMkFW5MVF0DeHLvE45dj88j0vrTR9JPzppIW/DbcgmS",
+  "avatar": "img-user1658711106869.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Romina",
+  "surname": "r",
+  "email": "rominarodes@hot.com",
+  "password": "$2a$10$lwYjpAnfEfh01zVxN8oBi.3CwHxtyPeAW5JMQI5a60yfD4Hb3vCdC",
+  "avatar": "img-user1658774312723.jpg"
+ }
+]

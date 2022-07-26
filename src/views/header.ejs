@@ -1,0 +1,10 @@
+<header style= 'background-color: blue; height: 150px'>
+  <%if(locals.isLogged){%>
+    <P><%= locals.userLogged.name %></P>
+    <img src="/images/<%=locals.userLogged.avatar%>" width=100px>
+    <a href="/logout"><button>Logout</button></a>
+  <%}else{%>
+    <a href="/login"><button>Login</button></a>
+    <a href="/register"><button>Register</button></a>
+ <% } %>
+  </header>
